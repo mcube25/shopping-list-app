@@ -11,8 +11,12 @@ private ingredients: Ingredient[] = [
 getIngredient(){
   return this.ingredients.slice();
 }
-addIngrredient(ingredient: Ingredient){
+addIngredient(ingredient: Ingredient){
   this.ingredients.push(ingredient);
   this.ingredientChanged.emit(this.ingredients.slice());
+}
+addIngredients(ingredients: Ingredient[]){
+  this.ingredients.push(...ingredients);
+  this.ingredientsChanged.emit(this.ingredients.slice())
 }
 }
