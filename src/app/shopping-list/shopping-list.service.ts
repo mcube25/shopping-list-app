@@ -17,6 +17,6 @@ addIngredient(ingredient: Ingredient){
 }
 addIngredients(ingredients: Ingredient[]){
   this.ingredients.push(...ingredients);
-  this.ingredientsChanged.emit(this.ingredients.slice())
+  this.ingredientChanged.emit(this.ingredients.slice())
 }
 }
